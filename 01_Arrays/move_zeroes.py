@@ -6,4 +6,3 @@ class Solution(object):
                 nums[left], nums[right] = nums[right], nums[left]
      
                 left += 1
-
