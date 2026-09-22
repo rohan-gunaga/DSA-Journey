@@ -9,7 +9,7 @@ class Solution(object):
 
             if nums[mid] == 0:
 
-                nums[left], nums[right] = nums[mid], nums[left]
+                nums[left], nums[mid] = nums[mid], nums[left]
                 left += 1
                 mid += 1
 
