@@ -1,11 +1,22 @@
 class Solution(object):
     def longestConsecutive(self, nums):
 
-        seen = set(nums)
-        current_number = 0
+        seen = set(nums) 
+        longest = 0
 
         for num in nums:
             if num - 1 not in seen:
-                num = current_number
+                current = num 
+                length = 1
 
-        return current_number
+
+                while current + 1 in seen:
+                    current += 1
+                    length += 1
+
+                    if length > longest:
+                        longest = length
+
+        return longest
+
+        
