@@ -4,7 +4,7 @@ class Solution(object):
         seen = set(nums) 
         longest = 0
 
-        for num in nums:
+        for num in seen:
             if num - 1 not in seen:
                 current = num 
                 length = 1
@@ -14,8 +14,8 @@ class Solution(object):
                     current += 1
                     length += 1
 
-                    if length > longest:
-                        longest = length
+                if length > longest:
+                    longest = length
 
         return longest
 
