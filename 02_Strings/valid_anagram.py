@@ -15,10 +15,10 @@ class Solution(object):
         for char in t:
             count_t[char] = count_t.get(char, 0) + 1
 
-            if count_s == count_t:
-                return True
-            else:
-                return False
+        if count_s == count_t:
+            return True
+        else:
+            return False
 
         
 
